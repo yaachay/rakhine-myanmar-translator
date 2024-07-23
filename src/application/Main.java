@@ -1,5 +1,11 @@
 package application;
 	
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import javax.swing.plaf.synth.SynthStyleFactory;
+
+import application.server.TranslatorService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -27,6 +33,17 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
+		String rkTitle = "ဇာကိုလားလေ့။";
+		
+		try
+		{
+			Registry registry = LocateRegistry.getRegistry("127.0.01", 1200);
+			TranslatorService translatorService = (TranslatorService) registry.lookup("TranslatorService");
+			System.out.print(translatorService.translateRK2MY(rkTitle));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		launch(args);
 	}
 }
