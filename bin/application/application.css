@@ -4,6 +4,7 @@
 }
 
 .textBox,
-.actionBtn{
+.actionBtn,
+.errMsg{
 	-fx-font-family: "pyidaungsu";
 }
