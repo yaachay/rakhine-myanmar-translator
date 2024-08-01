@@ -5,32 +5,49 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane style="-fx-background-color: #fbfbfb;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <VBox alignment="CENTER" prefHeight="610.0" prefWidth="1065.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefWidth="1065.0" spacing="10.0" BorderPane.alignment="CENTER">
          <padding>
             <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
          </padding>
-         <ImageView fitHeight="95.0" fitWidth="370.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@logo.png" />
-            </image>
-         </ImageView>
-         <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+         <HBox alignment="CENTER" spacing="10.0">
+            <children>
+               <Pane prefHeight="75.0" prefWidth="100.0" style="-fx-background-color: #000000; -fx-background-radius: 15;">
+                  <children>
+                     <Label layoutX="22.0" layoutY="12.0" text="RM" textFill="#efefef">
+                        <font>
+                           <Font name="System Bold" size="35.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
+               <Label text="Translator">
+                  <font>
+                     <Font name="System Bold" size="35.0" />
+                  </font>
+               </Label>
+            </children>
+            <VBox.margin>
+               <Insets bottom="10.0" top="10.0" />
+            </VBox.margin>
+         </HBox>
+         <ImageView fitHeight="305.0" fitWidth="305.0" pickOnBounds="true" preserveRatio="true">
          <image>
          	<Image url="@error.png" />
          </image>
          </ImageView>
-         <Label text="ဆာဗာအမှား ဖြစ်ပေါ်နေပါသည်။" styleClass="errMsg">
+         <Label styleClass="errMsg" text="ဆာဗာအမှား ဖြစ်ပေါ်နေပါသည်။">
             <font>
                <Font size="17.0" />
             </font>
          </Label>
-         <Pane prefHeight="200.0" />
+         <Pane prefHeight="100.0" />
       </VBox>
    </center>
 </BorderPane>

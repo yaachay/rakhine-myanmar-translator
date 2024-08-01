@@ -4,7 +4,6 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -42,7 +41,7 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 	public String translateRK2MY(String text) throws RemoteException {
 		
 		JSONArray rule = new JSONArray();
-		String query = "SELECT * FROM knowledgebase";
+		String query = "SELECT * FROM `knowledgebase` ORDER BY LENGTH(rakhine) DESC;";
 		
 		try (Statement stmt = conn.createStatement()) {
 			ResultSet rs = stmt.executeQuery(query);
@@ -64,7 +63,7 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 	public String translateMY2RK(String text) throws RemoteException {
 		
 		JSONArray rule = new JSONArray();
-		String query = "SELECT * FROM knowledgebase";
+		String query = "SELECT * FROM `knowledgebase` ORDER BY LENGTH(myanmar) DESC;";
 		
 		try (Statement stmt = conn.createStatement()) {
 			ResultSet rs = stmt.executeQuery(query);
@@ -94,7 +93,6 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 				String to = obj.getString("to");
 
 				output = output.replaceAll(from, to);
-				output = output.replace("null", "");
 
 			}
 		} catch (JSONException e) {

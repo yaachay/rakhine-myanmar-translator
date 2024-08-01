@@ -8,6 +8,7 @@ import java.rmi.registry.Registry;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -23,11 +24,12 @@ public class Main extends Application {
 			boolean registryAccessible = isRegistryAccessible(localRegistry, "TranslatorService");
 
 			if (registryAccessible) {
-				root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+				root = FXMLLoader.load(getClass().getResource("Home.fxml"));
 			} else {
 				root = FXMLLoader.load(getClass().getResource("Error.fxml"));
 			}
 			Scene scene = new Scene(root);
+			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.getIcons().add(icon);
 			primaryStage.setTitle("RM Translator");
