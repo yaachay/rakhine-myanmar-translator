@@ -1,4 +1,4 @@
-package application;
+package client;
 
 import javafx.fxml.FXML;
 
@@ -8,7 +8,6 @@ import java.awt.datatransfer.StringSelection;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-import application.server.TranslatorService;
 import javafx.event.ActionEvent;
 
 import javafx.scene.control.TextArea;
@@ -16,6 +15,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 
 import javafx.scene.input.KeyEvent;
+import server.TranslatorService;
 
 public class HomeController {
 	@FXML

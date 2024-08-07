@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fbfbfb;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SplashController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fbfbfb;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.SplashController">
    <children>
       <Pane layoutX="161.0" layoutY="163.0">
          <children>
@@ -31,6 +31,6 @@
          </font>
       </Label>
       <Label layoutX="515.0" layoutY="369.0" text="Version: 1.0.0" textAlignment="RIGHT" />
-      <ProgressBar fx:id="progressbarBar" layoutY="390.0" prefHeight="10.0" prefWidth="600.0" progress="0.36" />
+      <ProgressBar fx:id="progressBar" layoutY="390.0" prefHeight="10.0" prefWidth="600.0" progress="0.36" />
    </children>
 </Pane>
