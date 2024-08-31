@@ -41,7 +41,7 @@ public class Main extends Application {
 					protected Void call() throws Exception {
 //						Thread.sleep(3000); // Simulate loading
 						for (int i = 0; i <= 100; i++) {
-							Thread.sleep(30); // Simulate time-consuming task
+							Thread.sleep(20); // Simulate time-consuming task
 							controller.updateProgress(i/100.0);
 						}
 						return null;

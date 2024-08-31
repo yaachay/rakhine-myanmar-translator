@@ -4,11 +4,11 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class TranslatorServer {
-	public static final String serverLogo = " ____  __  __   ____\n"
-			+ "|  _ \\|  \\/  | / ___|  ___ _ ____   _____ _ __ \n"
-			+ "| |_) | |\\/| | \\___ \\ / _ \\ '__\\ \\ / / _ \\ '__|\n"
-			+ "|  _ <| |  | |  ___) |  __/ |   \\ V /  __/ |   \n"
-			+ "|_| \\_\\_|  |_| |____/ \\___|_|    \\_/ \\___|_|   \n";
+	public static final String serverLogo = " ____  __  __ _____   ____                           \r\n"
+			+ "|  _ \\|  \\/  |_   _| / ___|  ___ _ ____   _____ _ __ \r\n"
+			+ "| |_) | |\\/| | | |   \\___ \\ / _ \\ '__\\ \\ / / _ \\ '__|\r\n"
+			+ "|  _ <| |  | | | |    ___) |  __/ |   \\ V /  __/ |   \r\n"
+			+ "|_| \\_\\_|  |_| |_|   |____/ \\___|_|    \\_/ \\___|_|\n";
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

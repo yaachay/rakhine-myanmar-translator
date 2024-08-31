@@ -17,7 +17,6 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 
 	protected TranslatorImpl() throws RemoteException {
 		try {
-
 			String url = "jdbc:mysql://localhost:3306/testdb";
 			String username = "root";
 			String password = "";
@@ -32,7 +31,6 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 			System.out.println("Connected to the database.....");
 
 		} catch (SQLException e) {
-			e.printStackTrace();
 			throw new RemoteException("Database connection error.....");
 		}
 	}
@@ -93,7 +91,6 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 				String to = obj.getString("to");
 
 				output = output.replaceAll(from, to);
-
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
