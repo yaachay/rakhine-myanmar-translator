@@ -86,6 +86,33 @@
 ![alt text](<./assets/18.png>)
 7. After that,  select `TranslatorServer` under `Java Application` section on the left side and go to `Dependencies` tab on the right side. Then  select `Classpath Entries` and click `Advanced`.
 ![alt text](<./assets/19.png>)
+8. Then, select `Add Library` and click `OK`.
+![alt text](<./assets/20.png>)
+9. After that, select `User Library` and click `Next`.
+![alt text](<./assets/21.png>)
+10. Select 2 librabies (`JSON`,`MySQL Connector`)  and click `Finish`
+![alt text](<./assets/22.png>)
+11.  After all, click `Run` to run the server.
+![alt text](<./assets/23.png>)
+12.  The server will start as shown below.
+![alt text](<./assets/24.png>)
 <br>
 <h2 id="running-client">Running Client</h2>
+
+1. To run client, you need to **add libraries** to the project. To add libraries, `right-click` on `Main.java` and then click `Run As>Run Configurations`
+![alt text](<./assets/25.png>)
+2. After that,  select `Main` under `Java Application` section on the left side and go to `Dependencies` tab on the right side. Then  select `Modulepath Entries` and click `Advanced`.
+![alt text](<./assets/26.png>)
+3. Then, select `Add Library` and click `OK`.
+![alt text](<./assets/27.png>)
+4. After that, select `User Library` and click `Next`.
+![alt text](<./assets/28.png>)
+5.  Select 2 librabies (`JSON`,`MySQL Connector`)  and click `Finish`
+![alt text](<./assets/29.png>)
+6.   After all, click `Run` to run the server.
+![alt text](<./assets/30.png>)
+7.   The server will start as shown below.
+![alt text](<./assets/31.png>)
+>**`Note`:** You can **run easily** without doing any setup for the next times. 
+![alt text](<./assets/to-run-again.png>)
 <br>

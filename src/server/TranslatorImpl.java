@@ -17,7 +17,7 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 
 	protected TranslatorImpl() throws RemoteException {
 		try {
-			String url = "jdbc:mysql://localhost:3306/testdb";
+			String url = "jdbc:mysql://localhost:3306/database";
 			String username = "root";
 			String password = "";
 			try {
@@ -37,10 +37,10 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 
 	@Override
 	public String translateRK2MY(String text) throws RemoteException {
-		
+
 		JSONArray rule = new JSONArray();
 		String query = "SELECT * FROM `knowledgebase` ORDER BY LENGTH(rakhine) DESC;";
-		
+
 		try (Statement stmt = conn.createStatement()) {
 			ResultSet rs = stmt.executeQuery(query);
 			while (rs.next()) {
@@ -59,10 +59,10 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 
 	@Override
 	public String translateMY2RK(String text) throws RemoteException {
-		
+
 		JSONArray rule = new JSONArray();
 		String query = "SELECT * FROM `knowledgebase` ORDER BY LENGTH(myanmar) DESC;";
-		
+
 		try (Statement stmt = conn.createStatement()) {
 			ResultSet rs = stmt.executeQuery(query);
 			while (rs.next()) {
@@ -91,6 +91,7 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 				String to = obj.getString("to");
 
 				output = output.replaceAll(from, to);
+				output = output.replace("လား။", "လား။");
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();

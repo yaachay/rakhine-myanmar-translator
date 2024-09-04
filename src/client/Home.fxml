@@ -71,7 +71,7 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#onClickCopyRK" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #000000;" styleClass="actionBtn" text="ရခိုင်စာ ကူးယူပါ" textFill="#efefef">
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font size="14.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
