@@ -91,7 +91,6 @@ public class TranslatorImpl extends UnicastRemoteObject implements TranslatorSer
 				String to = obj.getString("to");
 
 				output = output.replaceAll(from, to);
-				output = output.replace("လား။", "လား။");
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();

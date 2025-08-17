@@ -1,118 +1,147 @@
-# RAKHINE<=>MYANMAR TRANSLATOR
->**Author:** Kyaw Zaya\
->**Language:** [Java RMI](https://docs.oracle.com/javase/8/docs/technotes/guides/rmi/index.html), [JavaFX](https://openjfx.io/)\
->**Description:** We make this project for **CST-4211** (4<sup>th</sup> Year, 2<sup>nd</sup> Semester).\
->**Version:** 1.0.0\
->**Date:** 2024-08-21\
->**Phone:** +959405999313\
->**Email:** kyawzaya@ucspathein.edu.mm\
->**Repository:** https://github.com/yaachay/Rakhine-Myanmar-Translator
+# RAKHINE <=> MYANMAR TRANSLATOR
+> **Author:** Kyaw Zaya  
+> **Languages Used:** [Java RMI](https://docs.oracle.com/javase/8/docs/technotes/guides/rmi/index.html), [JavaFX](https://openjfx.io/)  
+> **Description:** This project was developed for **CST-4211** (4<sup>th</sup> Year, 2<sup>nd</sup> Semester).  
+> **Version:** 1.0.0  
+> **Date:** 2024-08-21  
+> **Phone:** +959405999313  
+> **Email:** kyawzaya@ucspathein.edu.mm  
+> **Repository:** [GitHub Link](https://github.com/yaachay/Rakhine-Myanmar-Translator)  
 
-### Guides to run this project
+---
+
+### Project Setup Guide  
+
 <details>
-<summary>Download Requirements</summary>
+<summary><b>Download Requirements</b></summary>
 
-+ [Eclipse IDE](https://www.eclipse.org/downloads/)
-+ [Java JDK](https://www.oracle.com/java/technologies/downloads/)
-+ [JavaFX](https://gluonhq.com/products/javafx/)
-+ [MySQL Connector](https://dev.mysql.com/downloads/connector/j/)
-+ [JSON](https://download.oracle.com/otndocs/jcp/json_p-1_1-final-spec/index.html)
-> ***Note:*** You can find all requirements for **JavaFX, MySQL Connector and JSON** under `Project\lib` dictroy.
++ [Eclipse IDE](https://www.eclipse.org/downloads/)  
++ [Java JDK](https://www.oracle.com/java/technologies/downloads/)  
++ [JavaFX](https://gluonhq.com/products/javafx/)  
++ [MySQL Connector](https://dev.mysql.com/downloads/connector/j/)  
++ [JSON](https://download.oracle.com/otndocs/jcp/json-p-1_1-final-spec/index.html)  
+
+> **Note:** All required libraries (**JavaFX, MySQL Connector, JSON**) are also included under the `Project\lib` directory.  
+
 </details>
+
 <details>
-<summary>Setup Requirements</summary>
+<summary><b>Setup Requirements</b></summary>
 
-+ [Eclipse IDE Installation](#install-eclipse) 
-+ [Java JDK Installation](#install-java-jdk)
-+ [Setup JavaFX ](#setup-javafx)
-+ [Setup MySQL Connector](#setup-mysql-connector)
-+ [Setup JSON](#setup-json)
++ [Install Eclipse IDE](#install-eclipse)  
++ [Install Java JDK](#install-java-jdk)  
++ [Set up JavaFX](#setup-javafx)  
++ [Set up MySQL Connector](#setup-mysql-connector)  
++ [Set up JSON](#setup-json)  
+
 </details>
+
 <details>
-<summary>Running the Project</summary>
+<summary><b>Running the Project</b></summary>
 
-+ [Running Server](#running-server)
-+ [Running Client](#running-client)
++ [Run Server](#running-server)  
++ [Run Client](#running-client)  
+
 </details>
-<h2 id="setup-javafx">Setup JavaFX</h2>
 
-1. Firstly, you need to **copy** `javafx-sdk-22.0.2` folder from `Project\lib`.
-2. Then, go to Java dirctory (for me: `C:\Program Files\Java\`) and **paste**  the folder that we copied.
-3. After all, open the project in **EclipseIDE**.
-![alt text](<./assets/01.png>)
-1. Then, open `Window>Preferences` 
-![alt text](<./assets/02.png>)
-1. Go to `Java>Build Path>User Libraries`
-![alt text](<./assets/03.png>)
-1. Click `New` to clreate new library and enter library name `JavaFX`. Then click `OK`.
- ![alt text](<./assets/04.png>)
-1. Select `JavaFX` and click `Add External JARs`.
-![alt text](<./assets/05.png>)
-1. Then go to `C:\Program Files\Java\javafx-sdk-22.0.2\lib\` and select **all files**. After that click `Open`.
-![alt text](<./assets/06.png>)
-<br>
-<h2 id="setup-mysql-connector">Setup MySQL Connector</h2>
+---
 
-1. After creating **JavaFX** library, create new library name `MySQL Connenctor`.
-![alt text](<./assets/07.png>)
-1. Select `MySQL Connenctor` and click `Add External JARs`.
-![alt text](<./assets/08.png>)
-1. Then go to `Project\lib\` and select **jar** file for `mysql-connector`. After that click `Open`.
-![alt text](<./assets/09.png>)
-<br>
-<h2 id="setup-json">Setup JSON</h2>
+## Setup JavaFX  
 
-1. After creating **MySQL Connector** library, create new library name `JSON`.
-![alt text](<./assets/10.png>)
-1. Select `JSON` and click `Add External JARs`.
-![alt text](<./assets/11.png>)
-1. Then go to `Project\lib\` and select **jar** file for `json`. After that click `Open`.
-![alt text](<./assets/12.png>)
-<br>
-<hr>
-<h2 id="running-server">Running Server</h2>
+1. Copy the `javafx-sdk-22.0.2` folder from `Project\lib`.  
+2. Navigate to your Java installation directory (e.g., `C:\Program Files\Java\`) and **paste** the copied folder there.  
+3. Open the project in **Eclipse IDE**.  
+   ![alt text](<./assets/01.png>)  
+4. Go to `Window > Preferences`.  
+   ![alt text](<./assets/02.png>)  
+5. Navigate to `Java > Build Path > User Libraries`.  
+   ![alt text](<./assets/03.png>)  
+6. Click **New**, name the library `JavaFX`, then click **OK**.  
+   ![alt text](<./assets/04.png>)  
+7. Select `JavaFX` and click **Add External JARs**.  
+   ![alt text](<./assets/05.png>)  
+8. Browse to `C:\Program Files\Java\javafx-sdk-22.0.2\lib\`, select **all JAR files**, and click **Open**.  
+   ![alt text](<./assets/06.png>)  
 
-1. Before you run server, you need to **add libraries** to the project. To add libraries, `right-click` on the project and click `Build Path>Configure Build Path..`
-![alt text](<./assets/13.png>)
-2. Then, go to `Java Build Path>Libraries>` and select `Classpath` and then click `Add Library`.
-![alt text](<./assets/14.png>)
-3. After that, select `User Library` and click `Next`. 
-![alt text](<./assets/15.png>)
-4. Then, select user libraries (**JavaFX, MySQL Connector, JSON**) and then click `Finished`.
-![alt text](<./assets/16.png>)
-5. After **adding libraries**, click `Apply and Close`.
-![alt text](<./assets/17.png>)
-6. Now, you can run server by doing some task. <br> **Right-click** on `TranslatorServer.java` and then click `Run As>Run Configurations`
-![alt text](<./assets/18.png>)
-7. After that,  select `TranslatorServer` under `Java Application` section on the left side and go to `Dependencies` tab on the right side. Then  select `Classpath Entries` and click `Advanced`.
-![alt text](<./assets/19.png>)
-8. Then, select `Add Library` and click `OK`.
-![alt text](<./assets/20.png>)
-9. After that, select `User Library` and click `Next`.
-![alt text](<./assets/21.png>)
-10. Select 2 librabies (`JSON`,`MySQL Connector`)  and click `Finish`
-![alt text](<./assets/22.png>)
-11.  After all, click `Run` to run the server.
-![alt text](<./assets/23.png>)
-12.  The server will start as shown below.
-![alt text](<./assets/24.png>)
-<br>
-<h2 id="running-client">Running Client</h2>
+---
 
-1. To run client, you need to **add libraries** to the project. To add libraries, `right-click` on `Main.java` and then click `Run As>Run Configurations`
-![alt text](<./assets/25.png>)
-2. After that,  select `Main` under `Java Application` section on the left side and go to `Dependencies` tab on the right side. Then  select `Modulepath Entries` and click `Advanced`.
-![alt text](<./assets/26.png>)
-3. Then, select `Add Library` and click `OK`.
-![alt text](<./assets/27.png>)
-4. After that, select `User Library` and click `Next`.
-![alt text](<./assets/28.png>)
-5.  Select 2 librabies (`JSON`,`MySQL Connector`)  and click `Finish`
-![alt text](<./assets/29.png>)
-6.   After all, click `Run` to run the server.
-![alt text](<./assets/30.png>)
-7.   The server will start as shown below.
-![alt text](<./assets/31.png>)
->**`Note`:** You can **run easily** without doing any setup for the next times. 
-![alt text](<./assets/to-run-again.png>)
-<br>
+## Setup MySQL Connector  
+
+1. After creating the **JavaFX** library, create a new library named `MySQL Connector`.  
+   ![alt text](<./assets/07.png>)  
+2. Select `MySQL Connector` and click **Add External JARs**.  
+   ![alt text](<./assets/08.png>)  
+3. Browse to `Project\lib\`, select the `mysql-connector` JAR file, and click **Open**.  
+   ![alt text](<./assets/09.png>)  
+
+---
+
+## Setup JSON  
+
+1. After creating the **MySQL Connector** library, create a new library named `JSON`.  
+   ![alt text](<./assets/10.png>)  
+2. Select `JSON` and click **Add External JARs**.  
+   ![alt text](<./assets/11.png>)  
+3. Browse to `Project\lib\`, select the `json` JAR file, and click **Open**.  
+   ![alt text](<./assets/12.png>)  
+
+---
+
+## Running Server  
+
+1. Before running the server, you need to **add the required libraries** to the project.  
+   Right-click on the project and select `Build Path > Configure Build Path...`  
+   ![alt text](<./assets/13.png>)  
+2. Go to `Java Build Path > Libraries`, select `Classpath`, and click **Add Library**.  
+   ![alt text](<./assets/14.png>)  
+3. Choose **User Library** and click **Next**.  
+   ![alt text](<./assets/15.png>)  
+4. Select the libraries (**JavaFX, MySQL Connector, JSON**) and click **Finish**.  
+   ![alt text](<./assets/16.png>)  
+5. Click **Apply and Close**.  
+   ![alt text](<./assets/17.png>)  
+6. To run the server, right-click `TranslatorServer.java` and select `Run As > Run Configurations`.  
+   ![alt text](<./assets/18.png>)  
+7. Select `TranslatorServer` under `Java Application`, go to the `Dependencies` tab, select `Classpath Entries`, and click **Advanced...**.  
+   ![alt text](<./assets/19.png>)  
+8. Choose **Add Library** and click **OK**.  
+   ![alt text](<./assets/20.png>)  
+9. Select **User Library** and click **Next**.  
+   ![alt text](<./assets/21.png>)  
+10. Select the required libraries (`JSON`, `MySQL Connector`) and click **Finish**.  
+    ![alt text](<./assets/22.png>)  
+11. Finally, click **Run** to start the server.  
+    ![alt text](<./assets/23.png>)  
+12. The server will start as shown below.  
+    ![alt text](<./assets/24.png>)  
+
+---
+
+## Running Client  
+
+1. To run the client, you must also **add the required libraries**.  
+   Right-click on `Main.java` and select `Run As > Run Configurations`.  
+   ![alt text](<./assets/25.png>)  
+2. Select `Main` under `Java Application` in the left panel.  
+   ![alt text](<./assets/26.png>)  
+3. Go to the `Arguments` tab on the right. Paste the following into the **VM Arguments** box:  
+```javascript
+--module-path "C:\Program Files\Java\javafx-sdk-22.0.2\lib" --add-modules javafx.controls,javafx.graphics,javafx.fxml
+```
+![alt text](<./assets/27.png>)  
+
+> **Note:** The `javafx-sdk-22.0.2` folder must be placed under `C:\Program Files\Java\`.  
+> If it is stored elsewhere, replace the path with your custom JavaFX SDK directory.  
+
+4. Go to the `Dependencies` tab, select `Modulepath Entries`, and click **Advanced...**.  
+![alt text](<./assets/28.png>)  
+5. Select `Add Library > User Library`, then choose `JavaFX` and click **Finish**.  
+![alt text](<./assets/31.png>)  
+6. Click **Run** to start the client. The app will launch as shown below.  
+![alt text](<./assets/33.png>)  
+
+> **Note:** After the first configuration, you can run the client easily without repeating these steps.  
+![alt text](<./assets/to-run-again.png>)  
+
+---
+
